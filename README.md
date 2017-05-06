@@ -1,15 +1,15 @@
-Part of Reproducible FreeBSD Jail Setup
+# Scenario 1 of Reproducible FreeBSD Jail Setup Project
 
 Jacob McDonald
 Revision 170505a-yottabit
 
 All scenarios are also available in an easy-to-read [Google Doc][gdoc].
 
-# Problem Statement
+## Problem Statement
 
 As with any operating system, when used interactively, it is possible for a FreeBSD Jail to become misconfigured, crufty, outdated, and not work as expected. Additionally, FreeBSD kernel upgrades can affect the package compatibility that are installed in the Jail, and reverting the Jail dataset to an earlier snapshot would not alleviate this problem.
 
-# Assumptions
+## Assumptions
 
 * User has basic-to-intermediate UNIX experience
 
@@ -25,7 +25,7 @@ As with any operating system, when used interactively, it is possible for a Free
 
 * User knows how to create ZFS dataset snapshots, if needed, from an OS shell or FreeNAS UI
 
-# Solution
+## Solution
 
 Create configuration scripts for Jails in a similar fashion to Docker Containers, so that a Jail can be destroyed and recreated quickly in order to fix or upgrade the Jail environment.
 
@@ -43,9 +43,9 @@ It’s also possible to take this methodology a couple steps further. Namely:
 
 (Side note: scripting in Bourne *sh* is much easier when one realizes it isn’t *csh*. 😐 Also, this is 1979 Bourne shell, *sh*—not that newfangled 1989 Bourne-again shell, *bash*. It *should* be compatible with *dash*, the default */bin/sh* in GNU/Linux, but ymmv as I have not tested it.)
 
-## Scenario 1: Resilio Sync for distributed synchronization of data
+### Scenario 1: Resilio Sync for distributed synchronization of data
 
-Create a standard FreeBSD jail. Link in the persistent configuration dataset, **/config** in this case. Run the configuration script, **install-sync.sh** in this case.
+Create a standard FreeBSD jail. Link in the persistent configuration dataset, `/config` in this case. Run the configuration script, `install-sync.sh` in this case.
 
 [//]:
 

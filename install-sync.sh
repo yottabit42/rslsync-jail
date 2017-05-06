@@ -3,6 +3,10 @@
 # Install Resilio Sync, set config path. This script can also be run to update
 # rslsync.
 #
+# Also available in a convenient Google Doc:
+# https://docs.google.com/document/d/1LSr3J6hdnCDQHfiH45K3HMvEqzbug7GeUeDa_6b_Hhc
+#
+# Jacob McDonald
 # Revision 170420a-yottabit
 
 configDir=$(dialog --no-lines --stdout --inputbox "Persistent storage is:" 0 0 \
