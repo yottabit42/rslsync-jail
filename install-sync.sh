@@ -25,8 +25,8 @@ fi
 /usr/sbin/pkg clean --yes || exit
 
 echo "Killing rslsync in case it is running."
-/usr/bin/killall rslsync
-/usr/bin/killall -9 rslsync
+/usr/bin/killall -d rslsync && sleep 10
+/usr/bin/killall -d -9 rslsync
 
 /usr/local/bin/wget "https://download-cdn.resilio.com/stable/FreeBSD-x64/resilio-sync_freebsd_x64.tar.gz" \
 || exit
