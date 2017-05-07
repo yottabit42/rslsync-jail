@@ -49,3 +49,7 @@ It’s also possible to take this methodology a couple steps further. Namely:
 Create a standard FreeBSD jail. Link in the persistent configuration dataset, `/config` in this case. Run the configuration script, `install-sync.sh` in this case.
 
 [gdoc]: https://docs.google.com/document/d/1LSr3J6hdnCDQHfiH45K3HMvEqzbug7GeUeDa_6b_Hhc
+
+### License:
+
+Licensed under **BSD-3-Clause**, the *Modified BSD License*.
