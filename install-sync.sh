@@ -50,8 +50,12 @@ echo "Checking suitability of /etc/rc.local."
 [ ! -f "/etc/rc.local" ] && touch "/etc/rc.local" && chmod 755 "/etc/rc.local"
 
 echo "Adding to /etc/rc.local."
-echo "\"$configDir/rslsync\" --config \"$configDir/sync.conf\"" \
->> "/etc/rc.local" || exit
+if grep rslsync "/etc/rc.local"; then
+  true
+else
+  echo "\"$configDir/rslsync\" --config \"$configDir/sync.conf\"" \
+  >> "/etc/rc.local" || exit
+fi
 
 echo "Starting /etc/rc.local."
 /etc/rc.local
